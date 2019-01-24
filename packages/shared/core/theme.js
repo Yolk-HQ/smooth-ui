@@ -217,32 +217,33 @@ export const gridMaxWidths = {
 
 // Alerts
 
-export const alertPaddingY = '.75rem'
-export const alertPaddingX = '1.25rem'
-export const alertMarginBottom = '1rem'
+// export const alertPaddingY = '.75rem' // x
+// export const alertPaddingX = '1.25rem' // x
+// export const alertMarginBottom = '1rem' // x
 
-export const alertBgLevel = -10
-export const alertBorderLevel = -9
-export const alertColorLevel = 6
+// export const alertBgLevel = -10 // x
+// export const alertBorderLevel = -9 // x
+// export const alertColorLevel = 6 // x
 
-export const alertVariant = p => baseColorTheme => {
-  const baseColor = th(baseColorTheme)(p)
-  const alertColorLevel = th('alertColorLevel')(p)
-  const alertBgLevel = th('alertBgLevel')(p)
-  const alertBorderLevel = th('alertBorderLevel')(p)
+// x
+// export const alertVariant = p => baseColorTheme => {
+//   const baseColor = th(baseColorTheme)(p)
+//   const alertColorLevel = th('alertColorLevel')(p)
+//   const alertBgLevel = th('alertBgLevel')(p)
+//   const alertBorderLevel = th('alertBorderLevel')(p)
 
-  return css`
-    color: ${mixin('colorLevel', baseColor, alertColorLevel)(p)};
-    background-color: ${mixin('colorLevel', baseColor, alertBgLevel)(p)};
-    border-color: ${mixin('colorLevel', baseColor, alertBorderLevel)(p)};
-    hr {
-      border-top-color: ${darken(
-        0.05,
-        mixin('colorLevel', baseColor, alertColorLevel)(p),
-      )};
-    }
-  `
-}
+//   return css`
+//     color: ${mixin('colorLevel', baseColor, alertColorLevel)(p)};
+//     background-color: ${mixin('colorLevel', baseColor, alertBgLevel)(p)};
+//     border-color: ${mixin('colorLevel', baseColor, alertBorderLevel)(p)};
+//     hr {
+//       border-top-color: ${darken(
+//         0.05,
+//         mixin('colorLevel', baseColor, alertColorLevel)(p),
+//       )};
+//     }
+//   `
+// }
 
 // Z-indexes
 
@@ -289,7 +290,8 @@ export const breakpoints = DEFAULT_BREAKPOINTS
 // Color levels
 
 export const yiqContrastedThreshold = 150
-export const colorInterval = 0.08
+// x
+// export const colorInterval = 0.08
 
 // Headings
 
@@ -378,13 +380,14 @@ export const btnVariant = props => baseColor => css`
   }
 `
 
-export const colorLevel = props => (color, level) => {
-  color = typeof color === 'function' ? color(props) : color
-  level = typeof level === 'function' ? level(props) : level
-  const baseColor = level > 0 ? th('black')(props) : th('white')(props)
-  const absLevel = Math.abs(level)
-  return mix(absLevel * colorInterval, baseColor, color)
-}
+// x
+// export const colorLevel = props => (color, level) => {
+//   color = typeof color === 'function' ? color(props) : color
+//   level = typeof level === 'function' ? level(props) : level
+//   const baseColor = level > 0 ? th('black')(props) : th('white')(props)
+//   const absLevel = Math.abs(level)
+//   return mix(absLevel * colorInterval, baseColor, color)
+// }
 
 export const colorYik = props => color => {
   color = typeof color === 'function' ? color(props) : color

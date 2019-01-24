@@ -6,23 +6,21 @@ import { styled } from '../styled-engine'
 import { omit } from './misc'
 import { gth } from './system'
 
-function createComponent(getConfig) {
-  const {
-    name,
-    style,
-    omitProps = [],
-    defaultProps = {},
-    propTypes = {},
-    render = ({ Component, ...props }) => <Component {...props} />,
-    defaultComponent = 'div',
-    system = fullSystem,
-    applySystem = system => props => {
-      const theme = gth(props)
-      return { '&&': system.props({ ...props, theme }) }
-    },
-    InnerComponent: InnerComponentFromConfig,
-  } = getConfig()
-
+function createComponent({
+  name,
+  style,
+  omitProps = [],
+  defaultProps = {},
+  propTypes = {},
+  render = ({ Component, ...props }) => <Component {...props} />,
+  defaultComponent = 'div',
+  system = fullSystem,
+  applySystem = system => props => {
+    const theme = gth(props)
+    return { '&&': system.props({ ...props, theme }) }
+  },
+  InnerComponent: InnerComponentFromConfig,
+}) {
   const omittedProps = [
     'theme',
     ...(system ? system.meta.props : {}),

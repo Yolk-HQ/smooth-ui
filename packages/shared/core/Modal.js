@@ -69,7 +69,7 @@ class ModalComponent extends React.Component {
     const {
       className,
       forwardedRef,
-      uiAs,
+      as,
       theme,
       opened,
       onClose,
@@ -78,7 +78,6 @@ class ModalComponent extends React.Component {
       onClick,
       onKeyDown,
       initialFocusRef,
-      __scTheme,
       ...props
     } = this.props
     return (

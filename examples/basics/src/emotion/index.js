@@ -2,7 +2,7 @@
 /* @jsx jsx */
 import React from 'react'
 import { render } from 'react-dom'
-import { jsx, css, Button, Normalize, styled, uiAs } from '@smooth-ui/core-em'
+import { jsx, css, Button, Normalize, styled } from '@smooth-ui/core-em'
 
 const BlackButton = styled(Button)`
   color: black;

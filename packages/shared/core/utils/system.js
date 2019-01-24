@@ -1,5 +1,4 @@
 import PropTypes from 'prop-types'
-import { styled } from '../styled-engine'
 import * as theme from '../theme'
 import { is, num, get, cascade } from './misc'
 
@@ -37,13 +36,3 @@ export const stylePropType = PropTypes.oneOfType([
   PropTypes.string,
   PropTypes.object,
 ])
-
-export function uiAs(Component, asComponent) {
-  const StyledComponent = styled(Component)``
-  StyledComponent.propTypes = { ...Component.propTypes }
-  StyledComponent.defaultProps = {
-    ...Component.defaultProps,
-    uiAs: asComponent,
-  }
-  return StyledComponent
-}

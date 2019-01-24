@@ -54,3 +54,18 @@ Two ways to import theme in your code:
 import { theme } from '@smooth-ui/core-sc'
 import theme from '@smooth-ui/core-sc/theme'
 ```
+
+## Value reference
+
+You can refer to another value in theme using `th` utility.
+
+```js
+// theme.js
+import { theme, th } from '@smooth-ui/core-sc'
+
+export default {
+  ...theme,
+  blue: '#00bdff',
+  primary: th('blue'),
+}
+```

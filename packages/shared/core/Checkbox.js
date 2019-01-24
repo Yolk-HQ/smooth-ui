@@ -91,8 +91,8 @@ const getValidStyle = valid => {
 
 const controlStyle = p => css`
   input:focus + .sui-checkbox-content {
-    border-color: ${th('controlFocusBorderColor')};
-    box-shadow: ${mixin('controlFocusBoxShadow', 'primary')};
+    border-color: ${th('controlFocusBorderColor')(p)};
+    box-shadow: ${mixin('controlFocusBoxShadow', 'primary')(p)};
   }
 
   ${getValidStyle(p)};

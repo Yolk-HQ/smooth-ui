@@ -1,6 +1,6 @@
 /* eslint-disable */
 import React from 'react'
-import { Button, Normalize, styled, uiAs } from '@smooth-ui/core-sc'
+import { Button, Normalize, styled } from '@smooth-ui/core-sc'
 
 const BlackButton = styled(Button)`
   color: black;
