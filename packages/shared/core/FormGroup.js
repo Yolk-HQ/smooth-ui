@@ -2,7 +2,7 @@ import PropTypes from 'prop-types'
 import { css } from './styled-engine'
 import createComponent from './utils/createComponent'
 
-const FormGroup = createComponent(() => ({
+const FormGroup = createComponent({
   name: 'form-group',
   style: () => css`
     margin-bottom: 1rem;
@@ -10,6 +10,6 @@ const FormGroup = createComponent(() => ({
   propTypes: {
     children: PropTypes.node,
   },
-}))
+})
 
 export default FormGroup

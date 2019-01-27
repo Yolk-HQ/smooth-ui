@@ -361,10 +361,10 @@ export const base = () => () => css`
   }
 `
 
-export const controlFocus = props => (baseColor = 'primary') => css`
-  outline: 0;
-  box-shadow: 0 0 2px ${th(baseColor, color => transparentize(0.1, color))};
-`
+// export const controlFocus = props => (baseColor = 'primary') => css`
+//   outline: 0;
+//   box-shadow: 0 0 2px ${th(baseColor, color => transparentize(0.1, color))};
+// `
 
 export const btnVariant = props => baseColor => css`
   color: ${mixin('colorYik', th(baseColor))};

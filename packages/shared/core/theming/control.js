@@ -1,4 +1,4 @@
-import { transparentize } from 'polished'
+import { transparentize, lighten } from 'polished'
 import { css } from '../styled-engine'
 import { th, mixin } from './value'
 import { lineHeightBase, lineHeightSm, lineHeightLg } from './typography'
@@ -17,5 +17,6 @@ export const inputBtnLineHeightLg = th('inputBtnLineHeightLg', lineHeightLg)
 
 export const controlFocus = mixin('controlFocus', () => baseColor => css`
   outline: 0;
+  border-color: ${lighten(0.25, baseColor)};
   box-shadow: 0 0 2px ${transparentize(0.1, baseColor)};
 `)

@@ -1,6 +1,7 @@
 export * from './border'
 export * from './color'
 export * from './control'
+export * from './input'
 export * from './responsive'
 export * from './transition'
 export * from './typography'

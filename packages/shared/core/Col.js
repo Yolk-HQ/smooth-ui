@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types'
+import { css } from './styled-engine'
 import { mediaMinWidth } from './utils/breakpoints'
 import { prop, px, th } from './utils/system'
 import createComponent from './utils/createComponent'
@@ -67,9 +68,9 @@ function getBreakPointStyle(breakpoint, width, props) {
   }
 }
 
-const getStyleFromProps = props => {
-  const gutter = px(prop('gutter', 'gridGutter')(props))
-  const breakpoints = th('breakpoints')(props)
+const getStyleFromProps = p => {
+  const gutter = px(prop('gutter', 'gridGutter')(p))
+  const breakpoints = th('breakpoints')(p)
   const breakpointsKeys = Object.keys(breakpoints)
   const style = {
     boxSizing: 'border-box',
@@ -86,7 +87,7 @@ const getStyleFromProps = props => {
     const breakpoint = breakpointsKeys[index]
     Object.assign(
       style,
-      getBreakPointStyle(breakpoint, breakpoints[breakpoint], props),
+      getBreakPointStyle(breakpoint, breakpoints[breakpoint], p),
     )
   }
 
@@ -133,9 +134,12 @@ const Col = createComponent(() => ({
   },
 }))
 
-Col.Split = createComponent(() => ({
+Col.Split = createComponent({
   name: 'col-split',
-  style: () => ({ width: '100% !important' }),
-}))
+  style: () =>
+    css`
+      width: 100% !important;
+    `,
+})
 
 export default Col

@@ -17,7 +17,7 @@ const styleBreakpoints = p => {
   )
 }
 
-const Grid = createComponent(() => ({
+const Grid = createComponent({
   name: 'grid',
   omitProps: ['gutter', 'fluid'],
   style: p => {
