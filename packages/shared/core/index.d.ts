@@ -676,3 +676,5 @@ export const mediaBetweenWidth: (
   min: string | number,
   max: string | number,
 ) => string
+
+export const Tooltip: any
